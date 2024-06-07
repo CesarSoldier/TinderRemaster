@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Carousel</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/telaInicial.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <img src="{{ url_for('static', filename='imagens/nav/Light.png' ) }}" alt="">
+        </header>
+        <div class="carousel">
+            <div class="carousel-inner">
+                {% for slide in slides %}
+                    <div class="carousel-item {% if loop.first %}active{% endif %}">
+                        <img src="{{ url_for('static', filename='imagens/carrosel/' + slide[0]) }}" alt="Slide {{ loop.index }}">
+                        <img src="{{ url_for('static', filename='imagens/carrosel/' + slide[1]) }}" alt="Slide {{ loop.index }}">
+                        <img src="{{ url_for('static', filename='imagens/carrosel/' + slide[2]) }}" alt="Slide {{ loop.index }}">
+                    </div>
+                {% endfor %}
+            </div>
+            <button class="carousel-control prev" onclick="prevSlide()">&#10094;</button>
+            <button class="carousel-control next" onclick="nextSlide()">&#10095;</button>
+        </div>
+        <div class="content">
+            <h1>Algorithm</h1>
+            <p>Users going through a vetting process to ensure you never match with bots.</p>
+            <div class="dots">
+                {% for slide in slides %}
+                    <span class="dot {% if loop.first %}active{% endif %}" onclick="currentSlide({ loop,index })"></span>
+                {% endfor %}
+            </div>
+            <button class="btn">Create an account</button>
+            <p class="sign-in">Already have an account? <a href="#">Sign In</a></p>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</body>
+</html>

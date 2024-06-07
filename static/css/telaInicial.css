@@ -1,0 +1,135 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    color: #333;
+}
+
+.container {
+    max-width: 375px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    font-size: 14px;
+}
+
+.header .icons {
+    display: flex;
+    gap: 10px;
+}
+
+.carousel {
+    position: relative;
+    margin: 20px 0;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+    display: none;
+}
+
+.carousel-item.active {
+    display: flex;
+
+}
+
+.carousel-item img {
+    margin-right: 10px;
+    padding-top: 40px;
+    gap: 0px;
+    border-radius: 15px 0px 0px 0px;
+    opacity: 0px;
+    
+}
+
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.carousel-control.prev {
+    left: 10px;
+}
+
+.carousel-control.next {
+    right: 10px;
+}
+
+.content {
+    padding: 20px;
+}
+
+h1 {
+    color: #FF476F;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.dots {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin-bottom: 20px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background-color: #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: #FF476F;
+}
+
+.btn {
+    background-color: #FF476F;
+    color: #fff;
+    border: none;
+    padding: 15px 20px;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.btn:hover {
+    background-color: #FF5A7A;
+}
+
+.sign-in {
+    font-size: 14px;
+}
+
+.sign-in a {
+    color: #FF476F;
+    text-decoration: none;
+}
