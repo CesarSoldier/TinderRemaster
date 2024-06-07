@@ -32,7 +32,7 @@
                     <span class="dot {% if loop.first %}active{% endif %}" onclick="currentSlide({ loop,index })"></span>
                 {% endfor %}
             </div>
-            <button class="btn">Create an account</button>
+            <a href="{{ url_for('manage_users') }}" class="btn">Create an account</a>
             <p class="sign-in">Already have an account? <a href="#">Sign In</a></p>
         </div>
     </div>
