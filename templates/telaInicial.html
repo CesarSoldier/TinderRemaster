@@ -9,7 +9,7 @@
 <body>
     <div class="container">
         <header class="header">
-            <img src="{{ url_for('static', filename='imagens/nav/Light.png' ) }}" alt="">
+            <img src="{{ url_for('static', filename='imagens/header/Light.png' ) }}" alt="iphoneHead">
         </header>
         <div class="carousel">
             <div class="carousel-inner">
@@ -21,12 +21,17 @@
                     </div>
                 {% endfor %}
             </div>
-            <button class="carousel-control prev" onclick="prevSlide()">&#10094;</button>
-            <button class="carousel-control next" onclick="nextSlide()">&#10095;</button>
+         
         </div>
         <div class="content">
-            <h1>Algorithm</h1>
-            <p>Users going through a vetting process to ensure you never match with bots.</p>
+            <div class="phrases">
+                <h1 class="phrase">Algorithm</h1>
+                <p class="phrase">Users going through a vetting process to ensure you never match with bots.</p>
+                <h1 class="phrase">Matches</h1>
+                <p class="phrase">We match you with people that have a large array of similar interests.</p>
+                <h1 class="phrase">Premium</h1>
+                <p class="phrase">Sign up today and enjoy the first month of premium benefits on us.</p>
+            </div>
             <div class="dots">
                 {% for slide in slides %}
                     <span class="dot {% if loop.first %}active{% endif %}" onclick="currentSlide({ loop,index })"></span>
@@ -36,6 +41,6 @@
             <p class="sign-in">Already have an account? <a href="#">Sign In</a></p>
         </div>
     </div>
-    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/telaInicial.js') }}"></script>
 </body>
 </html>
