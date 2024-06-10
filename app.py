@@ -15,6 +15,10 @@ def index():
     slides = [slide1, slide2, slide3]
     return render_template('telaInicial.html', slides=slides)
 
+@app.route('/signup')
+def signup():
+    return render_template('signup.html')
+
 @app.route('/users', methods=['GET', 'POST'])
 def manage_users():
     if request.method == 'POST':
