@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request, redirect, url_for
 from config import Config
 from models import db, User
-import os
+import os 
 
 app = Flask(__name__)
 app.config.from_object(Config)
@@ -15,16 +15,12 @@ def index():
     slides = [slide1, slide2, slide3]
     return render_template('telaInicial.html', slides=slides)
 
-@app.route('/signup')
-def signup():
-    return render_template('signup.html')
-
 @app.route('/users', methods=['GET', 'POST'])
 def manage_users():
     if request.method == 'POST':
-        username = request.form['username']
-        email = request.form['email']
-        new_user = User(username=username, email=email)
+        email = request.form.get('email')
+        password = request.form.get('password')
+        new_user = User(email=email, password=password)
         try:
             db.session.add(new_user)
             db.session.commit()
@@ -34,7 +30,9 @@ def manage_users():
             return f"An error occurred while adding the user: {e}"
     users = User.query.all()
     return render_template('users.html', users=users)
-
+@app.route('/signup')
+def signup():
+    return render_template('signup.html')
 
 if __name__ == '__main__':
     with app.app_context():

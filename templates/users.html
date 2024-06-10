@@ -9,18 +9,18 @@
 <body>
     <h1>Users</h1>
     <form action="/users" method="post">
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required>
-        <br>
         <label for="email">Email:</label>
         <input type="email" id="email" name="email" required>
+        <br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
         <br>
         <button type="submit">Add User</button>
     </form>
     <h2>Existing Users</h2>
     <ul>
         {% for user in users %}
-            <li>{{ user.username }} - {{ user.email }} - {{ user.created_at }}</li>
+            <li>{{ user.email }} - {{ user.senha }} - {{ user.created_at }}</li>
         {% endfor %}
     </ul>
     <a href="{{ url_for('index') }}">Back to Home</a>
