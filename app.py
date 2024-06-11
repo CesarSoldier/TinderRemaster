@@ -30,6 +30,11 @@ def manage_users():
             return f"An error occurred while adding the user: {e}"
     users = User.query.all()
     return render_template('users.html', users=users)
+
+@app.route('/profile')
+def profile():
+    return render_template('profile.html')
+
 @app.route('/signup')
 def signup():
     return render_template('signup.html')
