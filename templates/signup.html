@@ -14,7 +14,7 @@
         
         <div class="sign">
             <h1>Sign up to continue</h1>
-            <a href="#" class="btn">Continue with email</a>
+            <a href="#" class="btn" id="openModalBtn">Continue with email</a>
         </div>
         
         <footer>
@@ -22,5 +22,15 @@
             <a href="#">Privacy Policy</a>
         </footer>
     </div>
+
+    <div id="emailModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Enter your email</h2>
+            <input type="email" id="emailInput" placeholder="Enter your email">
+            <a href="#" class="btn" id="submitEmailBtn">Submit</a>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/signupconfig.js') }}"></script>
 </body>
 </html>

@@ -2,7 +2,7 @@ let slideIndex = 1;
 showSlides(slideIndex);
 
 
-let interval = setInterval(nextSlide, 2000);
+let interval = setInterval(nextSlide, 3000);
 
 function nextSlide() {
     showSlides(slideIndex += 1);
@@ -43,20 +43,17 @@ function showSlides(n) {
 document.querySelectorAll('.prev, .next').forEach(item => {
     item.addEventListener('click', () => {
         clearInterval(interval); 
-        interval = setInterval(nextSlide, 2000); 
+        interval = setInterval(nextSlide, 3000); 
     });
 });
 
 document.querySelectorAll('.dot').forEach((dot, index) => {
     dot.addEventListener('click', () => {
         clearInterval(interval); 
-        interval = setInterval(nextSlide, 2000); 
+        interval = setInterval(nextSlide, 3000); 
         currentSlide(index + 1);
     });
     
 });
 
-document.getElementById('signInLink').addEventListener('click', function(event) {
-    event.preventDefault();
-    window.location.href = "/signup"; 
-});
+
