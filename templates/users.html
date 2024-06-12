@@ -9,38 +9,18 @@
 <body>
     <div class="container">
         <h1>Create Account</h1>
-        <form action="/users" method="post">
+        <form id="user-form" action="/users" method="post">
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" required>
             <br>
             <label for="password">Password:</label>
             <input type="password" id="password" name="password" required>
             <br>
-            <button type="button" onclick="addAndRedirect()">Add User</button>
-           
-            <a href="{{ url_for('index') }}">Back to Home</a>
+            <button type="submit">Add User</button>
         </form>
-    </div>
-    <div class="Users">
-        <h2>Existing Users</h2>
-        <ul>
-            {% for user in users %}
-                <li>{{ user.email }} - {{ user.senha }} - {{ user.created_at }}</li>
-            {% endfor %}
-        </ul>
+        <a href="{{ url_for('index') }}">Back to Home</a>
     </div>
 
-    <script>
-        function addAndRedirect() {
-        console.log("Função addAndRedirect() foi chamada.");
-        // Submeter o formulário
-        document.getElementById("addUserForm").submit();
-        // Redirecionar para profile.html após a submissão do formulário
-        console.log("Redirecionando para profile.html...");
-        window.location.href = "{{ url_for('profile') }}";
-    }
-    </script>
-   
+    <script src="{{ url_for('static', filename='js/userconfig.js') }}"></script>
 </body>
 </html>
-
