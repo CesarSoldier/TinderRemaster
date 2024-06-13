@@ -87,7 +87,7 @@ h1.phrase.active, p.phrase.active {
 }
 
 h1 {
-    color: #FF476F;
+    color: #E94057;
     font-size: 24px;
     margin-bottom: 10px;
 }
@@ -113,11 +113,11 @@ p {
 }
 
 .dot.active {
-    background-color: #FF476F;
+    background-color: #E94057;
 }
 
 .btn {
-    background-color: #FF476F;
+    background-color: #E94057;
     color: #fff;
     border: none;
     padding: 15px 20px;
@@ -129,7 +129,7 @@ p {
 }
 
 .btn:hover {
-    background-color: #FF5A7A;
+    background-color: #E94057;
 }
 
 .sign-in {
@@ -138,7 +138,7 @@ p {
 }
 
 .sign-in a {
-    color: #FF476F;
+    color: #E94057;
     text-decoration: none;
 }
 

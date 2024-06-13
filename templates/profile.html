@@ -3,13 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Added</title>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Profile Details</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/profile.css') }}">
 </head>
 <body>
-    <h1>User Successfully Added!</h1>
-    <p>The user has been added to the database.</p>
-    <a href="{{ url_for('manage_users') }}">Back to Manage Users</a>
-    <a href="{{ url_for('index') }}">Back to Home</a>
+    <div class="container">
+        <div class="skip">Skip</div>
+        <div class="profile-details">
+            <div class="titulo">
+                Profile details
+            </div>
+            <div class="profile-image">
+                <img src="{{ url_for('static', filename='imagens/profile/photo.png') }}" alt="Profile Picture" id="profile-pic">
+                <button class="camera-icon"><img src="{{ url_for('static', filename='imagens/profile/Camera.png') }}" alt="Camera Icon"></button>
+            </div>
+            <form>
+                <div class="input-container">
+                    <label for="first-name">First name</label>
+                    <input type="text" id="first-name" name="first-name">
+                </div>
+                <div class="input-container">
+                    <label for="last-name">Last name</label>
+                    <input type="text" id="last-name" name="last-name">
+                </div>
+                <button type="button" class="birthday-button">
+                    <img src="{{ url_for('static', filename='imagens/profile/Calendar.png') }}" alt="Calendar Icon">
+                    Choose birthday date
+                </button>
+                <button type="submit" class="confirm-button">Confirm</button>
+            </form>
+        </div>
+    </div>
 </body>
 </html>

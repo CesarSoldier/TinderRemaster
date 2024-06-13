@@ -1,0 +1,205 @@
+@font-face {
+    font-family: 'Sk-Modernist';
+    src: url(fontes/Sk-Modernist-Regular.otf) format(opentype);
+}
+
+
+body {
+    font-family: 'Sk-Modernist', sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #ffffff;
+    width: 100%;
+    height: 100vh;
+}
+
+.titulo{
+    display: flex;
+    width: 295px;
+    height: 51px;
+    top: 128px;
+    left: 40px;
+    gap: 0px;
+    opacity: 0px;
+    font-size: 34px;
+    font-weight: 700;
+    text-align: left;
+    margin-bottom: 40px;
+
+
+}
+
+.container {
+    text-align: center;
+    background-color: #fff;
+    padding: 40px 20px;
+    border-radius: 10px;
+    width: 300px;
+    position: relative;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.skip {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: #E94057;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.profile-details h1 {
+    margin-bottom: 20px;
+    font-size: 34px;
+    color: bold;
+    width: 295px;
+    height: 51px;
+    
+
+}
+
+.profile-image {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 20px;
+
+
+}
+
+.profile-image img {
+    width: 80px;
+    height: 80px;
+    border-radius: 20%;
+    object-fit: cover;
+    width: 101px;
+    height: 106px;
+    top: 270px;
+    left: 137px;
+    gap: 0px;
+    opacity: 0px;
+
+}
+
+.camera-icon {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: #E94057;
+    border: none;
+    border-radius: 50%;
+    padding: 5px;
+    cursor: pointer;
+    width: 34px;
+    height: 34px;
+    
+    
+}
+
+.camera-icon img {
+    width: 16px;
+    height: 14px;
+
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 295px;
+    height: 67px;
+    top: 485px;
+    left: 40px;
+    gap: 0px;
+    opacity: 0px;
+    
+}
+
+label {
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #00000066;
+    padding-left: 20px;
+    height: 18px;
+    top: 413px;
+    left: 68px;
+    gap: 0px;
+    opacity: 0px;
+
+
+}
+
+input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+ 
+    box-sizing: border-box;
+    border-color: #E8E6EA;
+    width: 295px;
+    height: 58px;
+    top: 422px;
+    left: 40px;
+    gap: 0px;
+    border: 1px 0px 0px 0px;
+    opacity: 0px;
+
+}
+
+.birthday-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #E94057;
+    border-color: #E8E6EA;
+    cursor: pointer;
+    box-sizing: border-box;
+    width: 295px;
+    height: 58px;
+    top: 562px;
+    left: 40px;
+    gap: 0px;
+    opacity: 0.1px;
+
+}
+
+.birthday-button img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    
+}
+
+.confirm-button {
+    background-color: #E94057;
+    border: none;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    box-sizing: border-box;
+    width: 295px;
+    height: 56px;
+    top: 708px;
+    left: 40px;
+    gap: 0px;
+    border-radius: 15px 15px 15px 15px;
+    opacity: 0px;
+
+}
