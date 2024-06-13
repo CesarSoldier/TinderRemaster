@@ -24,7 +24,7 @@ def manage_users():
         try:
             db.session.add(new_user)
             db.session.commit()
-            return redirect(url_for('manage_users'))
+            return redirect(url_for('profile'))
         except Exception as e:
             db.session.rollback()
             return f"An error occurred while adding the user: {e}"
