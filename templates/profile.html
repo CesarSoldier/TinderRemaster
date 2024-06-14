@@ -8,7 +8,7 @@
     <!-- Adicione o CSS do flatpickr -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <!-- Adicione o CSS personalizado -->
-    <!--<link rel="stylesheet" href="{{ url_for('static', filename='css/custom-flatpickr.css') }}"> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/custom-flatpickr.css') }}">
 </head>
 <body>
     <div class="container">
@@ -45,6 +45,7 @@
 
     <!-- Adicione o JS do flatpickr -->
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    
     <script src="{{ url_for('static', filename='js/calendario.js') }}"></script>
 </body>
 </html>

@@ -1,105 +1,32 @@
-/* custom-flatpickr.css */
 
-/* Container do calendário */
-.flatpickr-calendar {
-    border-radius: 12px;
-    background: #fff;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    width: 375px;
-    max-height: 50vh; /* Ocupa no máximo 50% da altura da tela */
-    position: absolute;
-    top: 298px;
-    gap: 0px;
-    opacity: 0; /* Inicialmente oculto */
-    transition: opacity 0.3s ease;
-    overflow-y: auto; /* Adiciona rolagem vertical se necessário */
-}
-
-.flatpickr-calendar.open {
-    opacity: 1; /* Visível quando aberto */
-}
-
-/* Header do calendário */
-.flatpickr-month {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: #ff416c;
-    font-size: 20px;
-    margin-bottom: 10px;
-}
-
-.flatpickr-current-month {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.cur-month {
-    font-size: 24px;
-    font-weight: bold;
-}
-
-.flatpickr-current-month span.cur-year {
-    font-size: 32px;
-}
-
-/* Navegação */
 .flatpickr-prev-month,
 .flatpickr-next-month {
     background: none;
     border: none;
-    color: #ff416c;
-    font-size: 20px;
+    color: #E94057;
+    
 }
 
 .flatpickr-prev-month:hover,
 .flatpickr-next-month:hover {
-    color: #ff6f7d;
+    color: #E94057;
 }
 
-/* Dias */
-.flatpickr-days {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    grid-gap: 5px;
-    margin-bottom: 10px;
-}
-
-.flatpickr-day {
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
-    text-align: center;
-    border-radius: 50%;
-    cursor: pointer;
-}
 
 .flatpickr-day:hover {
-    background: #ff6f7d;
+    background: #E94057;
     color: #fff;
 }
 
 .flatpickr-day.selected {
-    background: #ff416c;
+    background: #E94057;
     color: #fff;
 }
 
-/* Botão Salvar */
-.flatpickr-button {
-    background: #ff416c;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 10px;
-    cursor: pointer;
-    display: block;
-    width: 100%;
-    text-align: center;
-    font-size: 18px;
+.flatpickr-current-month .flatpickr-monthDropdown-months {
+    color: #E94057;
 }
 
-.flatpickr-button:hover {
-    background: #ff6f7d;
+.flatpickr-current-month input.cur-year {
+    color: #E94057;
 }
