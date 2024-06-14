@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile Details</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/profile.css') }}">
+    <!-- Adicione o CSS do flatpickr -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <!-- Adicione o CSS personalizado -->
+    <!--<link rel="stylesheet" href="{{ url_for('static', filename='css/custom-flatpickr.css') }}"> -->
 </head>
 <body>
     <div class="container">
@@ -26,7 +30,12 @@
                     <label for="last-name">Last name</label>
                     <input type="text" id="last-name" name="last-name">
                 </div>
-                <button type="button" class="birthday-button">
+                <div class="input-container">
+                    <label for="birthday">Birthday</label>
+                    <span id="display-birthday"></span>
+                    <input type="hidden" id="birthday" name="birthday">
+                </div>
+                <button type="button" class="birthday-button" id="open-calendar">
                     <img src="{{ url_for('static', filename='imagens/profile/Calendar.png') }}" alt="Calendar Icon">
                     Choose birthday date
                 </button>
@@ -34,5 +43,9 @@
             </form>
         </div>
     </div>
+
+    <!-- Adicione o JS do flatpickr -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="{{ url_for('static', filename='js/calendario.js') }}"></script>
 </body>
 </html>
