@@ -28,7 +28,7 @@ body {
     font-weight: 700;
     text-align: left;
     margin-bottom: 40px;
-
+ 
 
 }
 
@@ -51,15 +51,6 @@ body {
     font-size: 16px;
 }
 
-.profile-details h1 {
-    margin-bottom: 20px;
-    font-size: 34px;
-    color: bold;
-    width: 295px;
-    height: 51px;
-    
-
-}
 
 .profile-image {
     position: relative;
@@ -175,6 +166,7 @@ input[type="text"] {
     left: 40px;
     gap: 0px;
     opacity: 0.1px;
+    background-color: #FDECEF
 
 }
 
@@ -201,5 +193,6 @@ input[type="text"] {
     gap: 0px;
     border-radius: 15px 15px 15px 15px;
     opacity: 0px;
+    margin-top: 60px;
 
 }

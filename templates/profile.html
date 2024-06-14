@@ -30,14 +30,12 @@
                     <label for="last-name">Last name</label>
                     <input type="text" id="last-name" name="last-name">
                 </div>
-                <div class="input-container">
-                    <label for="birthday">Birthday</label>
-                    <span id="display-birthday"></span>
-                    <input type="hidden" id="birthday" name="birthday">
-                </div>
+
                 <button type="button" class="birthday-button" id="open-calendar">
                     <img src="{{ url_for('static', filename='imagens/profile/Calendar.png') }}" alt="Calendar Icon">
-                    Choose birthday date
+                    <span id="display-birthday">Choose birthday date</span>
+                    <input type="hidden" id="birthday" name="birthday">
+                    
                 </button>
                 <button type="submit" class="confirm-button">Confirm</button>
             </form>
