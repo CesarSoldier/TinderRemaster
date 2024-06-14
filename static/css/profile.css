@@ -150,7 +150,7 @@ input[type="text"] {
 .birthday-button {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     border: none;
     padding: 10px;
     border: 1px solid #ccc;
@@ -166,8 +166,9 @@ input[type="text"] {
     left: 40px;
     gap: 0px;
     opacity: 0.1px;
-    background-color: #FDECEF
-
+    background-color: #FDECEF;
+    font-size: 15px;
+    
 }
 
 .birthday-button img {
