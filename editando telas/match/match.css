@@ -1,0 +1,88 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f9f9f9;
+    margin: 0;
+}
+
+.match-container {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    width: 300px;
+}
+
+.image-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.image {
+    width: 100px;
+    height: 150px;
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.image + .image {
+    margin-left: -30px;
+}
+
+.heart-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    color: #E94057;
+
+}
+
+.text-container h1 {
+    font-size: 24px;
+    color: #E94057;
+    margin: 0 0 10px;
+}
+
+.text-container p {
+    color: #777;
+    margin: 0 0 20px;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+button {
+    background-color: #E94057;
+    border: none;
+    border-radius: 25px;
+    color: white;
+    font-size: 16px;
+    padding: 10px;
+    cursor: pointer;
+    outline: none;
+    width: 295px;
+    height: 56px;
+    top: 632px;
+    left: 40px;
+    gap: 0px;
+    border-radius: 15px;
+    opacity: 0px;
+
+}
+
+button.keep-swiping {
+    background-color: #fdecef;
+    color: #E94057;
+}
