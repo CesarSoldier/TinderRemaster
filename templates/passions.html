@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Interests</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/passions.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <button class="back-button"><img src="{{ url_for('static', filename='imagens/right.png') }}" alt="right"></button>
+            <button class="skip-button">Skip</button>
+        </div>
+        <div class="phrases">
+            <h1>Your interests</h1>
+            <p>Select a few of your interests and let everyone know what you're passionate about.</p>
+        </div>
+        <div class="interests">
+            <button class="interest-button">
+                <img src="interests/camera.png" alt="Photography">
+                Photography
+            </button>
+            <button class="interest-button">
+                <img src="interests/weixin-market.png" alt="Shopping">
+                Shopping
+            </button>
+            <button class="interest-button">
+                <img src="interests//music.png" alt="Karaoke">
+                Karaoke
+            </button>
+            <button class="interest-button">
+                <img src="interests//viencharts.png" alt="Yoga">
+                Yoga
+            </button>
+            <button class="interest-button">
+                <img src="interests//noodles.png" alt="Cooking">
+                Cooking
+            </button>
+            <button class="interest-button">
+                <img src="interests//tennis.png" alt="Tennis">
+                Tennis
+            </button>
+            <button class="interest-button">
+                <img src="interests//sport.png" alt="Run">
+                Run
+            </button>
+            <button class="interest-button">
+                <img src="interests//ripple.png" alt="Swimming">
+                Swimming
+            </button>
+            <button class="interest-button">
+                <img src="interests//platte.png" alt="Art">
+                Art
+            </button>
+            <button class="interest-button">
+                <img src="interests//outdoor.png" alt="Traveling">
+                Traveling
+            </button>
+            <button class="interest-button">
+                <img src="interests//parachute.png" alt="Extreme">
+                Extreme
+            </button>
+            <button class="interest-button">
+                <img src="interests//music.png" alt="Music">
+                Music
+            </button>
+            <button class="interest-button">
+                <img src="interests//goblet-full.png" alt="Drink">
+                Drink
+            </button>
+            <button class="interest-button">
+                <img src="interests//game-handle.png" alt="Video games">
+                Video games
+            </button>
+        </div>
+        <button class="continue-button">Continue</button>
+    </div>
+    <script src="{{ url_for('static', filename='js/passions.js') }}"></script>
+</body>
+</html>
