@@ -1,5 +1,11 @@
+@font-face {
+    font-family: 'Sk-Modernist';
+    src: url(Sk-Modernist-Regular.otf) format(opentype);
+}
+
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Sk-Modernist';
     display: flex;
     justify-content: center;
     align-items: center;
