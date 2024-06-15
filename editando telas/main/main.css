@@ -1,0 +1,264 @@
+@font-face {
+    font-family: 'Sk-Modernist';
+    src: url(Sk-Modernist-Regular.otf) format(opentype);
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Sk-Modernist';
+    background-color: #f8f9fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 375px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    background-color: white;
+    border-bottom: 1px solid #eaeaea;
+    padding-top: 40px;
+    font-family: 'Sk-Modernist';
+    
+}
+
+.back-btn, .settings-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+}
+
+.location h1 {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    
+    
+}
+
+.location p {
+    font-size: 12px;
+    font-weight: normal;
+    color: grey;
+    text-align: center;
+    
+}
+
+.profile-card {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin: 30px 0px 30px 0px ;
+    
+}
+
+.profile-pic {
+    display: block;
+    width: 295px;
+    height: 466px;
+    gap: 0px;
+    opacity: 0px;
+
+}
+
+.distance img{
+    width: 14px;
+    height: 14px;
+    top: 166px;
+    left: 66px;
+    padding: 0.58px 2.04px 0.58px 2.04px;
+    gap: 0px;
+    opacity: 0px;
+
+}
+
+.distance {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: #5e5e60;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 14px;
+    width: 61px;
+    height: 34px;
+    display: flex;
+    left: 56px;
+    gap: 1px;
+    opacity: 0px;
+    align-items: center;
+    justify-content: center;
+    font-family: Sk-Modernist;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 18px;
+    text-align: left;
+
+
+}
+
+
+.profile-info {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    width: 295px;
+    height: 83px;
+    top: 381px;
+    left: 40px;
+    display: flex;
+    border-radius: 20px;
+    overflow: hidden; /* Garante que o overflow seja ocultado para o efeito de bordas arredondadas */
+    z-index: 1; /* Para garantir que fique sobre o fundo embaçado */
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+
+    
+}
+
+.profile-info::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(4px); /* Aplica o efeito de desfoque no fundo */
+    z-index: -1; /* Coloca o pseudo-elemento atrás do conteúdo */
+    border-radius: 20px; /* Garante bordas arredondadas */
+    
+}
+
+
+.profile-info .name {
+    font-size: 18px;
+    font-weight: bold;
+    font-family: Sk-Modernist;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 36px;
+    text-align: left;
+    height: 36px;
+    top: 509px;
+    left: 56px;
+    gap: 0px;
+    opacity: 0px;
+    padding-left: 12px;
+
+}
+
+.profile-info .profession {
+    font-size: 14px;
+    color: white;
+    padding-left: 20px;
+    font-family: Sk-Modernist;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+
+}
+
+.actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background: white;
+    border-top: 1px solid #eaeaea;
+    position: relative;
+    width: 295px;
+    height: 150px;
+    left: 40px;
+    padding: 20px;
+    /*margin: 20px 0px 20px 0px;*/
+    
+
+}
+
+.action-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s;
+    
+}
+
+.action-btn.nope {
+    position: absolute;
+    left: 1%;
+}
+
+
+.action-btn.like {
+    font-size: 32px;
+    background: #E94057;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 99px;
+    height: 99px;
+    gap: 0px;
+    opacity: 0px;
+
+}
+
+.action-btn.super-like {
+    color: #ff6b6b;
+    position: absolute;
+    right: 1%;
+}
+
+.action-btn:hover {
+    background: #f1f1f1;
+}
+
+.bottom-nav {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    background: white;
+    border-top: 1px solid #eaeaea;
+}
+
+.nav-btn {
+    background: none;
+    border: none;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-btn img {
+    width: 24px;
+    height: 24px;
+}
