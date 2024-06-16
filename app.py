@@ -12,6 +12,7 @@ db.init_app(app)
 # Configuração da chave secreta
 app.secret_key = secrets.token_hex(16)
 
+#Todas as rotas para cada tela do projeto
 @app.route('/')
 def index():
     slide1 = ['girl1-left.png', 'girl1.png', 'girl1-right.png']
@@ -132,7 +133,7 @@ def passions(user_id):
 
 
 
-
+ 
 @app.route('/login', methods=['POST'])
 def login():
     email = request.form.get('email')
