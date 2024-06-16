@@ -4,11 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gender Selection</title>
-    
     <link rel="stylesheet" href="{{ url_for('static', filename='css/iam.css') }}">
 </head>
 <body>
-    
     <div class="container">
         <div class="header">
             <button class="back-button"><img src="{{ url_for('static', filename='imagens/right.png') }}" alt="right"></button>
@@ -17,14 +15,16 @@
         <div class="titulo">
             I am a
         </div>
-        <div class="options">
-            <button class="option" data-gender="Woman">Woman <span class="checkmark"></span></button>
-            <button class="option" data-gender="Man">Man <span class="checkmark"></span></button>
-            <button class="option choose-another">Choose another <span class="checkmark"></span></button>
-        </div>
-        <button class="continue-button">Continue</button>
+        <form id="gender-form" method="post" action="{{ url_for('iam', user_id=user.id) }}">
+            <div class="options">
+                <button type="button" class="option" data-gender="Woman">Woman <span class="checkmark"></span></button>
+                <button type="button" class="option" data-gender="Man">Man <span class="checkmark"></span></button>
+                <button type="button" class="option choose-another">Choose another <span class="checkmark"></span></button>
+            </div>
+            <input type="hidden" name="gender" id="gender-input">
+            <button type="submit" class="continue-button">Continue</button>
+        </form>
     </div>
-    
     <script src="{{ url_for('static', filename='js/iam.js') }}"></script>
 </body>
 </html>

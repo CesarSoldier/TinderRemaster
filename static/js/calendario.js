@@ -17,8 +17,8 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    openCalendarButton.addEventListener('click', function() {
+    openCalendarButton.addEventListener('click', function(event) {
+        event.preventDefault();  // Evita qualquer comportamento de submissão do formulário
         calendar.open();
     });
 });
-

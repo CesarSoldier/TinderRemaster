@@ -1,25 +1,42 @@
-var modal = document.getElementById("emailModal");
-        var btn = document.getElementById("openModalBtn");
-        var span = document.getElementsByClassName("close")[0];
-        var submitBtn = document.getElementById("submitEmailBtn");
+document.addEventListener('DOMContentLoaded', function() {
+    const openModalBtn = document.getElementById('openModalBtn');
+    const emailModal = document.getElementById('emailModal');
+    const closeModal = document.querySelector('.close');
+    const submitEmailBtn = document.getElementById('submitEmailBtn');
+    const emailInput = document.getElementById('emailInput');
 
-        btn.onclick = function() {
-            modal.style.display = "block";
+    openModalBtn.addEventListener('click', () => {
+        emailModal.style.display = 'block';
+    });
+
+    closeModal.addEventListener('click', () => {
+        emailModal.style.display = 'none';
+    });
+
+    window.addEventListener('click', (event) => {
+        if (event.target === emailModal) {
+            emailModal.style.display = 'none';
         }
+    });
 
-        span.onclick = function() {
-            modal.style.display = "none";
-        }
-
-        window.onclick = function(event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
+    submitEmailBtn.addEventListener('click', () => {
+        const email = emailInput.value;
+        fetch('/login', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded'
+            },
+            body: new URLSearchParams({
+                'email': email
+            })
+        })
+        .then(response => {
+            if (response.redirected) {
+                window.location.href = response.url;
+            } else {
+                alert('Login failed. Email not recognized.');
             }
-        }
-
-        submitBtn.onclick = function() {
-            var email = document.getElementById("emailInput").value;
-            console.log("Email submitted:", email);
-            // Aqui você pode adicionar código para enviar o email para o servidor
-            modal.style.display = "none";
-        }   
+        })
+        .catch(error => console.error('Error:', error));
+    });
+});

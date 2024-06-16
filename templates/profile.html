@@ -5,9 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile Details</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/profile.css') }}">
-    <!-- Adicione o CSS do flatpickr -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
-    <!-- Adicione o CSS personalizado -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/custom-flatpickr.css') }}">
 </head>
 <body>
@@ -19,33 +17,32 @@
             </div>
             <div class="profile-image">
                 <img src="{{ url_for('static', filename='imagens/profile/photo.png') }}" alt="Profile Picture" id="profile-pic">
-                <button class="camera-icon"><img src="{{ url_for('static', filename='imagens/profile/Camera.png') }}" alt="Camera Icon"></button>
+                <button type="button" class="camera-icon"><img src="{{ url_for('static', filename='imagens/profile/Camera.png') }}" alt="Camera Icon"></button>
             </div>
-            <form>
+            <form method="post" action="{{ url_for('profile', user_id=user.id) }}">
+                <input type="hidden" name="user_id" value="{{ user.id }}">
                 <div class="input-container">
                     <label for="first-name">First name</label>
-                    <input type="text" id="first-name" name="first-name">
+                    <input type="text" id="first-name" name="first-name" value="{{ user.first_name or '' }}" required>
                 </div>
                 <div class="input-container">
                     <label for="last-name">Last name</label>
-                    <input type="text" id="last-name" name="last-name">
+                    <input type="text" id="last-name" name="last-name" value="{{ user.last_name or '' }}" required>
                 </div>
-
-                <button type="button" class="birthday-button" id="open-calendar">
-                    <img src="{{ url_for('static', filename='imagens/profile/Calendar.png') }}" alt="Calendar Icon">
-                    <span id="display-birthday">Choose birthday date </span>
-                    <input type="hidden" id="birthday" name="birthday">
-                    
-                </button>
-
+                <div class="input-container">
+                    <label for="birthday">Birthday</label>
+                    <div id="open-calendar">
+                        <img src="{{ url_for('static', filename='imagens/profile/Calendar.png') }}" alt="Calendar Icon">
+                        <span id="display-birthday">Choose birthday date</span>
+                        <input type="hidden" id="birthday" name="birthday">
+                    </div>
+                </div>
                 <button type="submit" class="confirm-button">Confirm</button>
             </form>
         </div>
     </div>
 
-    <!-- Adicione o JS do flatpickr -->
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-    
     <script src="{{ url_for('static', filename='js/calendario.js') }}"></script>
 </body>
 </html>
