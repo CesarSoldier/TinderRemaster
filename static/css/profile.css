@@ -39,6 +39,7 @@ body {
     color: #E94057;
     cursor: pointer;
     font-size: 16px;
+    
 }
 
 .profile-image {
@@ -77,6 +78,9 @@ form {
     flex-direction: column;
     gap: 15px;
     margin-top: 20px;
+    width: 295px;
+
+  
 }
 
 .input-container {
@@ -90,6 +94,7 @@ label {
     font-size: 14px;
     color: #00000066;
     padding-left: 20px;
+    font-family: 'Sk-Modernist', sans-serif;
 }
 
 input[type="text"] {
@@ -100,6 +105,15 @@ input[type="text"] {
     box-sizing: border-box;
     border-color: #E8E6EA;
     width: 100%;
+    width: 295px;
+    height: 58px;
+    top: 494px;
+    left: 40px;
+    gap: 0px;
+    border: 1px 0px 0px 0px;
+    opacity: 0px;
+    font-family: 'Sk-Modernist', sans-serif;
+
 }
 
 .birthday-button {
@@ -115,6 +129,15 @@ input[type="text"] {
     border-color: #E8E6EA;
     cursor: pointer;
     background-color: #FDECEF;
+    width: 295px;
+    height: 58px;
+    top: 562px;
+    left: 40px;
+    gap: 0px;
+    opacity: 0.1px;
+    font-weight: 700;
+    font-family: 'Sk-Modernist', sans-serif;
+
 }
 
 .birthday-button img {
@@ -133,7 +156,19 @@ input[type="text"] {
     cursor: pointer;
     width: 100%;
     margin-top: 60px;
+    width: 295px;
+    height: 56px;
+    top: 708px;
+    left: 40px;
+    gap: 0px;
+    border-radius: 15px;
+    font-family: 'Sk-Modernist', sans-serif;
+
+
 }
+
+
+
 
 /* Media Queries */
 @media (max-width: 768px) {

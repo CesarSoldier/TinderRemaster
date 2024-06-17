@@ -16,7 +16,7 @@
                 Profile details
             </div>
             <div class="profile-image">
-                <img src="{{ url_for('static', filename='imagens/profile/sem-foto.jpg') }}" alt="Profile Picture" id="profile-pic">
+                <img src="{{ url_for('static', filename='imagens/profile/perfil.png') }}" alt="Profile Picture" id="profile-pic">
                 <button type="button" class="camera-icon"><img src="{{ url_for('static', filename='imagens/profile/Camera.png') }}" alt="Camera Icon"></button>
             </div>
             <form method="post" action="{{ url_for('profile', user_id=user.id) }}">
@@ -30,13 +30,13 @@
                     <input type="text" id="last-name" name="last-name" value="{{ user.last_name or '' }}" required>
                 </div>
                 <div class="input-container">
-                    <label for="birthday">Birthday</label>
-                    <div id="open-calendar">
+                    <button type="button" class="birthday-button" id="open-calendar">
                         <img src="{{ url_for('static', filename='imagens/profile/Calendar.png') }}" alt="Calendar Icon">
                         <span id="display-birthday">Choose birthday date</span>
+                      
                         <input type="hidden" id="birthday" name="birthday">
-                    </div>
-                </div>
+    
+                    </button>
                 <button type="submit" class="confirm-button">Confirm</button>
             </form>
         </div>
