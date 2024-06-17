@@ -10,7 +10,7 @@
     <div class="matches-container">
         <div class="header">
             <h1>Matches</h1>
-            <div class="header-icon"><img src="img/btn 'filter'.png" alt=""></div>
+            <div class="header-icon"><img src="{{ url_for('static', filename='imagens/matches/btn 'filter'.png') }}" alt="filtro"></div>
         </div>
         <p>This is a list of people who have liked you and your matches.</p>
         <div class="matches-section">
@@ -86,9 +86,9 @@
             </div>
         </div>
         <div class="footer">
-            <div class="footer-icon"><img src="img/cards.png" alt="cards"></div>
-            <div class="footer-icon"><img src="img/indicator.png" alt="likes"></div>
-            <div class="footer-icon"><img src="img/people.png" alt="perfil"></div>
+            <div class="footer-icon"><img src="{{ url_for('static', filename='imagens/matches/cards.png') }}" alt="Cards"></div>
+            <img src="{{ url_for('static', filename='imagens/matches/indicator.png') }}" alt="Indicator">
+            <img src="{{ url_for('static', filename='imagens/matches/people.png') }}" alt="Profile">
         </div>
     </div>
 </body>

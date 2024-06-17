@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Sk-Modernist';
-    src: url(fontes/Sk-Modernist-Regular.otf) format(opentype);
+    src: url(fontes/Sk-Modernist-Regular.otf) format('opentype');
 }
 
 body {
@@ -15,12 +15,14 @@ body {
     min-height: 100vh;
 }
 
-.container{
+.container {
     background-color: #fff;
     padding: 60px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    width: 400px;
+    width: 90%;
+    max-width: 400px;
+    margin: 20px;
 }
 
 h1, h2 {
@@ -105,3 +107,35 @@ a:hover {
     text-decoration: underline;
 }
 
+/* Media Queries */
+@media (max-width: 768px) {
+    .container, form, ul {
+        width: 90%;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 40px 20px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    h2 {
+        font-size: 16px;
+    }
+
+    button[type="submit"] {
+        font-size: 14px;
+    }
+}

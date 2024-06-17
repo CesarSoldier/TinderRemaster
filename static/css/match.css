@@ -1,0 +1,139 @@
+@font-face {
+    font-family: 'Sk-Modernist';
+    src: url(fontes/Sk-Modernist-Regular.otf) format('opentype');
+}
+
+body {
+    font-family: 'Sk-Modernist';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f9f9f9;
+    margin: 0;
+}
+
+.match-container {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    width: 300px;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.image-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.image {
+    width: 100px;
+    height: 150px;
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.image + .image {
+    margin-left: -30px;
+}
+
+.heart-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    color: #E94057;
+}
+
+.text-container h1 {
+    font-size: 24px;
+    color: #E94057;
+    margin: 0 0 10px;
+}
+
+.text-container p {
+    color: #777;
+    margin: 0 0 20px;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+button {
+    background-color: #E94057;
+    border: none;
+    border-radius: 25px;
+    color: white;
+    font-size: 16px;
+    padding: 10px;
+    cursor: pointer;
+    outline: none;
+    width: 100%;
+    max-width: 295px;
+    box-sizing: border-box;
+}
+
+button.keep-swiping {
+    background-color: #fdecef;
+    color: #E94057;
+}
+
+@media (max-width: 768px) {
+    .match-container {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .image {
+        width: 80px;
+        height: 120px;
+    }
+
+    .text-container h1 {
+        font-size: 20px;
+    }
+
+    .text-container p {
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .match-container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .image {
+        width: 70px;
+        height: 105px;
+    }
+
+    .text-container h1 {
+        font-size: 18px;
+    }
+
+    .text-container p {
+        font-size: 12px;
+    }
+
+    button {
+        font-size: 12px;
+        padding: 6px;
+    }
+}

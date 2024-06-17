@@ -16,7 +16,7 @@
                 Profile details
             </div>
             <div class="profile-image">
-                <img src="{{ url_for('static', filename='imagens/profile/photo.png') }}" alt="Profile Picture" id="profile-pic">
+                <img src="{{ url_for('static', filename='imagens/profile/sem-foto.jpg') }}" alt="Profile Picture" id="profile-pic">
                 <button type="button" class="camera-icon"><img src="{{ url_for('static', filename='imagens/profile/Camera.png') }}" alt="Camera Icon"></button>
             </div>
             <form method="post" action="{{ url_for('profile', user_id=user.id) }}">

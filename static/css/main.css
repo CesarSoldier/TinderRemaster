@@ -1,8 +1,7 @@
 @font-face {
     font-family: 'Sk-Modernist';
-    src: url(Sk-Modernist-Regular.otf) format(opentype);
+    src: url('Sk-Modernist-Regular.otf') format('opentype');
 }
-
 
 * {
     margin: 0;
@@ -20,7 +19,8 @@ body {
 }
 
 .container {
-    width: 375px;
+    width: 100%; /* Adjusted width for responsiveness */
+    max-width: 375px; /* Added max-width to maintain container width limit */
     background: white;
     border-radius: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -31,26 +31,22 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 15px;
+    padding: 40px 15px 10px;
     background-color: white;
     border-bottom: 1px solid #eaeaea;
-    padding-top: 40px;
-    font-family: 'Sk-Modernist';
-    
 }
 
 .back-btn, .settings-btn {
     background: none;
     border: none;
     font-size: 24px;
+    cursor: pointer;
 }
 
 .location h1 {
     text-align: center;
     font-size: 24px;
     font-weight: bold;
-    
-    
 }
 
 .location p {
@@ -58,35 +54,22 @@ body {
     font-weight: normal;
     color: grey;
     text-align: center;
-    
 }
 
 .profile-card {
     position: relative;
     display: flex;
     justify-content: center;
-    margin: 30px 0px 30px 0px ;
-    
+    margin: 30px 0;
 }
 
 .profile-pic {
     display: block;
-    width: 295px;
-    height: 466px;
-    gap: 0px;
-    opacity: 0px;
-
-}
-
-.distance img{
-    width: 14px;
-    height: 14px;
-    top: 166px;
-    left: 66px;
-    padding: 0.58px 2.04px 0.58px 2.04px;
-    gap: 0px;
-    opacity: 0px;
-
+    width: 100%; /* Adjusted width for responsiveness */
+    max-width: 295px; /* Added max-width to maintain image size limit */
+    height: auto; /* Ensures image maintains aspect ratio */
+    border-radius: 20px;
+    object-fit: cover;
 }
 
 .distance {
@@ -98,102 +81,52 @@ body {
     padding: 5px 10px;
     border-radius: 20px;
     font-size: 14px;
-    width: 61px;
-    height: 34px;
     display: flex;
-    left: 56px;
-    gap: 1px;
-    opacity: 0px;
     align-items: center;
     justify-content: center;
-    font-family: Sk-Modernist;
-    font-size: 12px;
     font-weight: 700;
-    line-height: 18px;
-    text-align: left;
-
-
+    z-index: 1;
 }
 
+.distance img {
+    width: 14px;
+    height: 14px;
+    margin-right: 5px;
+}
 
 .profile-info {
     position: absolute;
     bottom: 20px;
     left: 20px;
     color: white;
-    width: 295px;
-    height: 83px;
-    top: 381px;
-    left: 40px;
+    width: calc(100% - 40px);
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    backdrop-filter: blur(4px);
+    z-index: 1;
     display: flex;
-    border-radius: 20px;
-    overflow: hidden; /* Garante que o overflow seja ocultado para o efeito de bordas arredondadas */
-    z-index: 1; /* Para garantir que fique sobre o fundo embaçado */
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
     flex-direction: column;
-
-    
+    align-items: flex-start;
 }
-
-.profile-info::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    backdrop-filter: blur(4px); /* Aplica o efeito de desfoque no fundo */
-    z-index: -1; /* Coloca o pseudo-elemento atrás do conteúdo */
-    border-radius: 20px; /* Garante bordas arredondadas */
-    
-}
-
 
 .profile-info .name {
-    font-size: 18px;
-    font-weight: bold;
-    font-family: Sk-Modernist;
     font-size: 24px;
-    font-weight: 700;
-    line-height: 36px;
-    text-align: left;
-    height: 36px;
-    top: 509px;
-    left: 56px;
-    gap: 0px;
-    opacity: 0px;
-    padding-left: 12px;
-
+    font-weight: bold;
+    margin-bottom: 5px;
 }
 
 .profile-info .profession {
     font-size: 14px;
-    color: white;
-    padding-left: 20px;
-    font-family: Sk-Modernist;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 21px;
-
 }
 
 .actions {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px;
+    padding: 20px;
     background: white;
     border-top: 1px solid #eaeaea;
-    position: relative;
-    width: 295px;
-    height: 150px;
-    left: 40px;
-    padding: 20px;
-    /*margin: 20px 0px 20px 0px;*/
-    
-
 }
 
 .action-btn {
@@ -208,32 +141,23 @@ body {
     border-radius: 50%;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: background 0.3s;
-    
+    cursor: pointer;
 }
 
 .action-btn.nope {
-    position: absolute;
-    left: 1%;
+    color: #ff6b6b;
 }
-
 
 .action-btn.like {
     font-size: 32px;
     background: #E94057;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 99px;
-    height: 99px;
-    gap: 0px;
-    opacity: 0px;
-
+    color: white;
+    width: 70px;
+    height: 70px;
 }
 
 .action-btn.super-like {
-    color: #ff6b6b;
-    position: absolute;
-    right: 1%;
+    color: #6b6bff;
 }
 
 .action-btn:hover {
@@ -261,4 +185,43 @@ body {
 .nav-btn img {
     width: 24px;
     height: 24px;
+}
+
+/* Media Query for tablets and larger screens */
+@media (min-width: 768px) {
+    .container {
+        width: 600px; /* Adjust width for larger screens */
+    }
+
+    .profile-pic {
+        max-width: 100%; /* Ensure image doesn't exceed container width */
+    }
+}
+
+/* Media Query for screens around 480px */
+@media (max-width: 480px) {
+    .container {
+        width: 100%; /* Full width on smaller screens */
+        max-width: none; /* Remove max-width to expand container */
+    }
+
+    .profile-pic {
+        max-width: 100%; /* Ensure image scales properly */
+    }
+
+    .header {
+        padding: 30px 10px; /* Adjust header padding */
+    }
+
+    .profile-info {
+        bottom: 10px; /* Adjust position of profile info */
+        left: 10px;
+        width: calc(100% - 20px);
+    }
+
+    .action-btn {
+        width: 40px; /* Reduce action button size */
+        height: 40px;
+        font-size: 20px;
+    }
 }

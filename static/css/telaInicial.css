@@ -143,7 +143,6 @@ p {
     text-decoration: none;
 }
 
-/* Media Queries for Responsiveness */
 @media (max-width: 767px) {
     .container {
         padding: 10px;
