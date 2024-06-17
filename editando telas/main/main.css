@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Sk-Modernist';
-    src: url(fontes/Sk-Modernist-Regular.otf) format(opentype);
+    src: url(Sk-Modernist-Regular.otf) format(opentype);
 }
 
 
@@ -231,36 +231,14 @@ body {
 }
 
 .action-btn.super-like {
-    color: #E94057;
+    color: #ff6b6b;
     position: absolute;
     right: 1%;
 }
 
-.action-btn.super-like:hover{
-    background-color: #8a2387;
+.action-btn:hover {
+    background: #f1f1f1;
 }
-
-.action-btn.action-btn.super-like img:hover{
-    filter: brightness(0) invert(1);
-}
-
-.action-btn.action-btn.nope img:hover{
-    filter: brightness(0) invert(1);
-}
-
-
-
-.action-btn.nope:hover {
-    background: #f27121;
-}
-
-
-.action-btn.like:hover {
-    background: #e60b29;
-}
-
-
-
 
 .bottom-nav {
     display: flex;

@@ -73,6 +73,7 @@ p {
     grid-template-columns: 1fr 1fr;
     gap: 10px;
     padding: 20px;
+    font-family: 'Sk-Modernist', sans-serif;
 }
 
 .interest-button {
@@ -88,6 +89,7 @@ p {
     transition: background-color 0.3s, color 0.3s;
     width: 100%;
     max-width: 140px;
+    font-family: 'Sk-Modernist', sans-serif;
 }
 
 .interest-button img {
@@ -118,6 +120,7 @@ p {
     cursor: pointer;
     width: 100%;
     max-width: 295px;
+    font-family: 'Sk-Modernist', sans-serif;
 }
 
 @media (max-width: 768px) {
