@@ -107,7 +107,7 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Media Queries */
+
 @media (max-width: 768px) {
     .container, form, ul {
         width: 90%;
