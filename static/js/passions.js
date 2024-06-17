@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const selectedInterests = [];
         interestButtons.forEach(button => {
             if (button.classList.contains('selected')) {
-                selectedInterests.push(button.getAttribute('data-interest'));
+                selectedInterests.push(button.textContent.trim());
             }
         });
         

@@ -124,7 +124,7 @@ def passions(user_id):
         user.interests = ','.join(interests)
         try:
             db.session.commit()
-            return redirect(url_for('next_page', user_id=user.id))  # Substitua 'next_page' pelo próximo endpoint
+            return redirect(url_for('main', user_id=user.id))  # Substitua 'next_page' pelo próximo endpoint
         except Exception as e:
             db.session.rollback()
             return f"An error occurred while updating the user: {e}"
