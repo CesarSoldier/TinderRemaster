@@ -100,9 +100,11 @@ footer a:hover {
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
-    max-width: 500px;
+    max-width: 400px;
     text-align: center;
-    border-radius: 5px;
+    border-radius: 10px;
+    
+    font-family: 'Sk-Modernist', sans-serif;
 }
 
 .close {
@@ -119,12 +121,16 @@ footer a:hover {
     cursor: pointer;
 }
 
+
+
 .modal input[type="email"] {
-    width: 100%;
+    width: 90%;
     padding: 10px;
     margin: 10px 0;
     border: 1px solid #ccc;
     border-radius: 4px;
+    
+    font-family: 'Sk-Modernist', sans-serif;
 }
 
 .modal .btn {
