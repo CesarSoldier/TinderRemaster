@@ -78,12 +78,14 @@ body {
     padding: inherit;
 }
 
-h1.phrase, p.phrase {
+h1.phrase,
+p.phrase {
     display: none;
     text-align: center;
 }
 
-h1.phrase.active, p.phrase.active {
+h1.phrase.active,
+p.phrase.active {
     display: block;
 }
 
@@ -146,6 +148,7 @@ p {
 @media (max-width: 767px) {
     .container {
         padding: 10px;
+        
     }
 
     .header {

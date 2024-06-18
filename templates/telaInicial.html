@@ -15,7 +15,8 @@
             <div class="carousel-inner">
                 {% for slide in slides %}
                     <div class="carousel-item {% if loop.first %}active{% endif %}">
-                            <img src="{{ url_for('static', filename='imagens/carrosel/' + slide[1]) }}" alt="Slide {{ loop.index }}">
+                        <img src="{{ url_for('static', filename='imagens/carrosel/' + slide[0]) }}" alt="Slide {{ loop.index }}">
+                        <img src="{{ url_for('static', filename='imagens/carrosel/' + slide[1]) }}" alt="Slide {{ loop.index }}">
                         <img src="{{ url_for('static', filename='imagens/carrosel/' + slide[2]) }}" alt="Slide {{ loop.index }}">
                     </div>
                 {% endfor %}

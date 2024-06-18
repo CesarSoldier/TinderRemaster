@@ -125,7 +125,7 @@ p {
 
 @media (max-width: 768px) {
     .container {
-        width: 100%;
+       
         padding: 20px;
     }
 
@@ -157,17 +157,24 @@ p {
 }
 
 @media (max-width: 480px) {
+    
+    .header{
+        position: sticky;
+        
+    }
+    
     .container {
-        width: 100%;
+        margin-bottom: 100px;
         padding: 15px;
+        
     }
 
     .phrases h1 {
-        font-size: 24px;
+        font-size: 34px;
     }
 
     .phrases p {
-        font-size: 12px;
+        font-size: 17px;
     }
 
     h1 {
@@ -180,11 +187,11 @@ p {
 
     .interest-button {
         padding: 6px 8px;
-        font-size: 12px;
+        font-size: 15px;
     }
 
     .continue-button {
-        font-size: 12px;
-        padding: 6px;
+        font-size: 17px;
+        padding: 15px;
     }
 }

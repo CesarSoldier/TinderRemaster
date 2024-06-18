@@ -9,10 +9,11 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 80vh;
     background-color: #ffffff;
     width: 100%;
 }
+
 
 .titulo {
     font-size: 34px;
@@ -129,7 +130,7 @@ h1 {
 
 @media (max-width: 480px) {
     .container {
-        max-width: none; 
+        
     }
 
     .back-button {
@@ -141,7 +142,7 @@ h1 {
     .skip-button {
         font-size: 14px; 
         top: 10px;
-        right: 10px;
+        right: 10px;   
     }
 
     .titulo {
@@ -167,13 +168,14 @@ h1 {
     .continue-button {
         font-size: 14px; 
         padding: 12px; 
+        margin-top: 100px;
     }
 }
 
 
 @media (max-width: 760px) {
     .container {
-        max-width: 100%; 
+        
     }
 
     .back-button {

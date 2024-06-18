@@ -164,6 +164,7 @@ def matches():
 def signup():
     return render_template('signup.html')
 
+
 if __name__ == '__main__':
     with app.app_context():
         if not os.path.exists(os.path.join(app.config['BASE_DIR'], 'app.db')):

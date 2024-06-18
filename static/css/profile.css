@@ -116,6 +116,8 @@ input[type="text"] {
 
 }
 
+
+
 .birthday-button {
     display: flex;
     align-items: center;
@@ -213,34 +215,36 @@ input[type="text"] {
         padding: 20px 10px;
         width: 100%;
         max-width: 320px;
+        
     }
 
     .titulo {
-        font-size: 24px;
-        margin-bottom: 20px;
+        font-size: 34px;
+        margin-bottom: 80px;
     }
 
     .skip {
-        font-size: 12px;
+        font-size: 16px;
+        
     }
 
     .profile-image img {
-        width: 60px;
-        height: 60px;
+        width: 100px;
+        height: 100px;
     }
 
     .camera-icon {
-        width: 25px;
-        height: 25px;
+        width: 40px;
+        height: 40px;
     }
 
     .camera-icon img {
-        width: 12px;
-        height: 10px;
+        width: 20px;
+        height: 15px;
     }
 
     .confirm-button {
-        font-size: 12px;
+        font-size: 17px;
         padding: 6px;
     }
 }

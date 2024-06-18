@@ -8,6 +8,7 @@
 </head>
 <body>
     <div class="container">
+        <a href="{{ url_for('index') }}"><button class="back-button"><img src="{{ url_for('static', filename='imagens/right.png') }}" alt="right"></button></a>
         <h1>Create Account</h1>
         <form id="user-form" action="/users" method="post">
             <label for="email">Email:</label>
@@ -18,7 +19,7 @@
             <br>
             <button type="submit">Add User</button>
         </form>
-        <a href="{{ url_for('index') }}">Back to Home</a>
+ 
     </div>
 
     <script src="{{ url_for('static', filename='js/userconfig.js') }}"></script>

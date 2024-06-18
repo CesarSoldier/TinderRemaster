@@ -208,12 +208,15 @@ body {
     border-radius: 50%;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: background 0.3s;
+    box-shadow: 0 15px 15px 0 #e2e2e2;
     
 }
 
 .action-btn.nope {
     position: absolute;
     left: 1%;
+    box-shadow: 0 15px 15px 0 #e2e2e2;
+    
 }
 
 
@@ -227,6 +230,7 @@ body {
     height: 99px;
     gap: 0px;
     opacity: 0px;
+    box-shadow: 0 15px 15px 0 #e6c6c9;
 
 }
 
