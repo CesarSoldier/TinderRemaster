@@ -4,38 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile Card</title>
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <button class="back-btn"><img src="img/right.png" alt=""></button>
+            <button class="back-btn"><img src="{{ url_for('static', filename='imagens/main/right.png') }}" alt="Back"></button>
             <div class="location">
                 <h1>Discover</h1>
-                <p>Chicago, II</p>
+                <p>Chicago, IL</p>
             </div>
-            <button class="settings-btn"><img src="img/setting-config.png" alt="config"></button>
+            <button class="settings-btn"><img src="{{ url_for('static', filename='imagens/main/setting-config.png') }}" alt="Settings"></button>
         </div>
         <div class="profile-card">
-            <img src="img/photo (1).png" alt="Jessica Parker" class="profile-pic">
-            <div class="distance"><img src="img/Combined Shape.png" alt="">1 km</div>
-            <div class="profile-info">
-                <div class="name">Jessica Parker, 23</div>
-                <div class="profession">Professional model</div>
-            </div>
+            <img src="https://via.placeholder.com/150x250" alt="Jessica Parker" class="profile-pic">
+            {% if random_user %}
+            <h2>{{ random_user.first_name }} {{ random_user.last_name }}</h2>
+            {% else %}
+            <h2>No other users found.</h2>
+            {% endif %}
         </div>
         <div class="actions">
-            <button class="action-btn nope"><img src="img/close-small.png" alt="close"></button>
-            <button class="action-btn like"><img src="img/like.png" alt="like"></button>
-            <button class="action-btn super-like"><img src="img/star.png" alt="star-superlike"></button>
+            <button class="action-btn nope"><img src="{{ url_for('static', filename='imagens/main/close-small.png') }}" alt="Nope"></button>
+            <button class="action-btn like"><img src="{{ url_for('static', filename='imagens/main/like.png') }}" alt="Like"></button>
+            <button class="action-btn super-like"><img src="{{ url_for('static', filename='imagens/main/star.png') }}" alt="Super Like"></button>
         </div>
         <nav class="bottom-nav">
-            <button class="nav-btn"><img src="img/cards.png" alt="Home"></button>
-            <button class="nav-btn"><img src="img/indicator.png" alt="Like"></button>
-            <button class="nav-btn"><img src="img/people.png" alt="Perfil"></button>
+            <button class="nav-btn"><img src="{{ url_for('static', filename='imagens/main/cards.png') }}" alt="Home"></button>
+            <button class="nav-btn"><img src="{{ url_for('static', filename='imagens/main/indicator.png') }}" alt="Match"></button>
+            <button class="nav-btn"><img src="{{ url_for('static', filename='imagens/main/people.png') }}" alt="Profile"></button>
         </nav>
     </div>
-
-    <script src="main.js"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
 </body>
 </html>

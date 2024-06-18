@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h1>Welcome, {{ user.first_name }}</h1>
+
+    {% if random_user %}
+        <div class="user-card">
+            <h2>{{ random_user.first_name }} {{ random_user.last_name }}</h2>
+            <button id="like-button">Like</button>
+        </div>
+    {% else %}
+        <p>No other users available.</p>
+    {% endif %}
+
+    <script>
+        $(document).ready(function() {
+            $('#like-button').click(function() {
+                $.post("/like/{{ random_user.id }}", function(data) {
+                    if (data.match) {
+                        alert("It's a match!");
+                    } else {
+                        alert("Like registered");
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

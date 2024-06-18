@@ -5,22 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile Card</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
-    
+
     <div class="container">
         <div class="header">
             <button class="back-btn"><img src="{{ url_for('static', filename='imagens/main/right.png') }}" alt="Back"></button>
             <div class="location">
                 <h1>Discover</h1>
-                <p>Chicago, II</p>
+                <p>Chicago, IL</p>
             </div>
             <button class="settings-btn"><img src="{{ url_for('static', filename='imagens/main/setting-config.png') }}" alt="Settings"></button>
         </div>
         <div class="profile-card">
-            <img src="https://via.placeholder.com/150x250" alt="{{ user.first_name }} {{ user.last_name }}" class="profile-pic">
+            <img src="https://via.placeholder.com/150x250" alt="Jessica Parker" class="profile-pic">
             <div class="profile-info">
-                <div class="name">{{ user.first_name }} {{ user.last_name }}</div>
+                {% if random_user %}
+                <div class="name">
+                    {{ random_user.first_name }} {{ random_user.last_name }}
+                </div>
+                {% else %}
+                <h2>No other users found.</h2>
+                {% endif %}
             </div>
         </div>
         <div class="actions">
@@ -30,10 +37,33 @@
         </div>
         <nav class="bottom-nav">
             <button class="nav-btn"><img src="{{ url_for('static', filename='imagens/main/cards.png') }}" alt="Home"></button>
-            <button class="nav-btn"><img src="{{ url_for('static', filename='imagens/main/indicator.png') }}" alt="Like"></button>
+            <a href={{ url_for('matches') }}"><button class="nav-btn"><img src="{{ url_for('static', filename='imagens/main/indicator.png') }}" alt="Match"></button></a>
             <button class="nav-btn"><img src="{{ url_for('static', filename='imagens/main/people.png') }}" alt="Profile"></button>
         </nav>
     </div>
+    
     <script src="{{ url_for('static', filename='js/main.js') }}"></script>
-</body>
+
+    <script>
+    function likeUser(userId, likedUserId) {
+        fetch(`/like/${userId}/${likedUserId}`, {
+            method: 'POST',
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(data => {
+            console.log('Like successful:', data);
+            // Aqui você pode adicionar lógica adicional se necessário
+        })
+        .catch(error => {
+            console.error('Error liking user:', error);
+        });
+    }
+</script>
+
+</body
 </html>
