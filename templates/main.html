@@ -45,7 +45,7 @@
     <script src="{{ url_for('static', filename='js/main.js') }}"></script>
 
     <script>
-    function likeUser(userId, likedUserId) {
+        function likeUser(userId, likedUserId) {
         fetch(`/like/${userId}/${likedUserId}`, {
             method: 'POST',
         })
@@ -62,8 +62,7 @@
         .catch(error => {
             console.error('Error liking user:', error);
         });
-    }
-</script>
-
+        }
+    </script>
 </body
 </html>
